@@ -1,4 +1,4 @@
-* Fall 2021 - Lab 09
+* Spring 2022 - Lab 06
 
 * Last name:
 
@@ -14,54 +14,53 @@
 - Fill in your name and GitHub username on top.
 - Use the Notes section to add any notes to the instructor.
 - The main lab description can be found here:
-  https://maryash.github.io/135/labs/lab_09.html 
+  https://maryash.github.io/135/labs/lab_06.html 
 
 
-*Note:* This lab will require doctest based tests.
+* Specific instructions for lab 05
 
-* Tasks A-C
+This lab requires that you implement doctest based tests. There is
+already a skeleton ~Makefile~ with targets for ~main~ and ~tests~ as
+well as skeleton ~.c~ ~.h~ and ~doctest.h~ files. 
 
-The code for Coord3D: 
+** Task A
 
-#+begin_src c++
-  #pragma once
-  class Coord3D {
-  public:
-      double x;
-      double y;
-      double z;
-  };
-#+end_src
+For Task A, create a file test-ascii.cpp as specified in the main
+lab. There should be a target in your Makefile *test-ascii* which will
+build test-ascii.cpp into an executable named *test-ascii*. This file should have its own main and you should not use doctest to test it.
 
-should be in a file named *coord3d.h* and should be included in the
-files that use it. You include local files using quotes instead of
-angle brackets. So, if you're in a file *funcs.h* and it uses the
-Coord3D class you'd have this at the top: 
+** Tasks B - D
 
-#+begin_src c++
+***  Task B
 
-// there could be other includes here
-#include "coord3d.h"
+Write the functions required for task B in a files named *caesar.cpp*
+and *caeser.h*. You will have to change the Makefile accordingly. Also
+note that this repository starts with funcs.cpp/funcs.h. You won't be
+using those files but can use them and the Makefile as a starting
+point.
 
-// rest of funcs.h here
+Make sure to put sufficient doctest tests for the two functions in tests.cpp. 
 
-#+end_src
+For reference, the doctest package and documentation can be found
+[[https://github.com/onqtam/doctest][here]].
 
 
-For task A, in addition to main printing out a Coord3D also put a test
-in tests.cpp to test similarly. 
 
-For tasks B and C, add the functions to *funcs.cpp* and *funcs.h*, run
-from main and create doctest based tests in tests.cpp.
+*Note:* Remember that your program (including tests) should not ask
+ for any keyboard input. When run it should clearly show that all
+ tasks are implemented and work.
 
-* Task D
 
-complete this task as specified in the main lab. Don't incorporate it
-into your main, Makefile, or tests.
+*** Task C
 
-* Task E
+Write the functions for Task C in files named *vigenere.cpp* and
+*vigenere.h*. Once again, modify the other files as necessary and
+write sufficient tests in *tests.cpp*.
 
-Add these functions to funcs.h  / funcs.cpp. Run from main and test
-from tests.cpp. 
+*** Task D
+
+Write the functions for Task D in files named *decrypt.cpp* and
+*decrypt.h* Once again, modify the other files as necessary and
+write sufficient tests in *tests.cpp*.
 
 
